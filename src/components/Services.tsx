@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   Cat, Home, Waves, Shield, Building, 
   BookOpen, Bird, Grid, Film, Package,
-  Fence, Lock, Mountain, Baby, Stair, 
+  Fence, Lock, Mountain, Baby, Stairs, 
   Bath, Construction, Trees, Play
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ const serviceList = [
   { icon: Play, title: 'Quadras', description: 'Redes para quadras esportivas', link: '/services/quadras' },
   { icon: Waves, title: 'Piscinas', description: 'Proteção para áreas de piscina', link: '/services/piscinas' },
   { icon: Baby, title: 'Crianças', description: 'Segurança para crianças e bebês', link: '/services/criancas' },
-  { icon: Stair, title: 'Escadas', description: 'Proteção para escadarias', link: '/services/escadas' },
+  { icon: Stairs, title: 'Escadas', description: 'Proteção para escadarias', link: '/services/escadas' },
   { icon: Bath, title: 'Morcegos', description: 'Prevenção contra morcegos', link: '/services/morcegos' },
   { icon: Construction, title: 'Obras', description: 'Redes de segurança para construções', link: '/services/obras' },
   { icon: Trees, title: 'Parques', description: 'Proteção para áreas de lazer', link: '/services/parques' },
