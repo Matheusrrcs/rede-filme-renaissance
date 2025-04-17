@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { 
-  Cat, Home, Water, Shield, Building, 
+  Cat, Home, Waves, Shield, Building, 
   BookOpen, Bird, Grid, Film, Package,
-  Fence, Lock, Mountain, Baby, Stairs, 
-  Bat, Construction, Trees, Play
+  Fence, Lock, Mountain, Baby, Stairs as StairsIcon, 
+  Bath, Construction, Trees, Play
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -13,10 +13,10 @@ const serviceList = [
   { icon: Cat, title: 'Animais', description: 'Proteção para animais de estimação', link: '/services/animais' },
   { icon: Home, title: 'Varandas', description: 'Proteção para varandas e sacadas', link: '/services/varandas' },
   { icon: Play, title: 'Quadras', description: 'Redes para quadras esportivas', link: '/services/quadras' },
-  { icon: Water, title: 'Piscinas', description: 'Proteção para áreas de piscina', link: '/services/piscinas' },
+  { icon: Waves, title: 'Piscinas', description: 'Proteção para áreas de piscina', link: '/services/piscinas' },
   { icon: Baby, title: 'Crianças', description: 'Segurança para crianças e bebês', link: '/services/criancas' },
-  { icon: Stairs, title: 'Escadas', description: 'Proteção para escadarias', link: '/services/escadas' },
-  { icon: Bat, title: 'Morcegos', description: 'Prevenção contra morcegos', link: '/services/morcegos' },
+  { icon: StairsIcon, title: 'Escadas', description: 'Proteção para escadarias', link: '/services/escadas' },
+  { icon: Bath, title: 'Morcegos', description: 'Prevenção contra morcegos', link: '/services/morcegos' },
   { icon: Construction, title: 'Obras', description: 'Redes de segurança para construções', link: '/services/obras' },
   { icon: Trees, title: 'Parques', description: 'Proteção para áreas de lazer', link: '/services/parques' },
   { icon: Bird, title: 'Pombos', description: 'Prevenção contra pombos', link: '/services/pombos' },
