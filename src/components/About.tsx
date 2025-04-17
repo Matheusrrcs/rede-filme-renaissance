@@ -25,7 +25,7 @@ const About = () => {
     <section id="about" className="py-16">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
             Sobre Nossa Empresa
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -37,7 +37,7 @@ const About = () => {
           <div className="space-y-4">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <feature.icon className="h-8 w-8 text-blue-600" />
+                <feature.icon className="h-8 w-8 text-red-600" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
