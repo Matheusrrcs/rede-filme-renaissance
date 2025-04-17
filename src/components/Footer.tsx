@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-900 text-white py-12">
+    <footer className="bg-red-700 text-white py-12">
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-2xl font-bold mb-4">Rede Proteção</h3>
@@ -41,13 +41,13 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Links Rápidos</h4>
           <div className="grid grid-cols-2 gap-2">
             {quickLinks.map((link, index) => (
               <a 
                 key={index} 
                 href={link.url} 
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-yellow-400 transition-colors"
               >
                 {link.label}
               </a>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold mb-4">Contato</h4>
+          <h4 className="text-lg font-semibold mb-4 text-yellow-400">Contato</h4>
           <address className="not-italic text-white/80">
             <p>Av. Luis Viana, 6462</p>
             <p>Wall Street, Paralela</p>
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 mt-8 pt-6 border-t border-blue-700 text-center">
+      <div className="container mx-auto px-4 mt-8 pt-6 border-t border-red-600 text-center">
         <p className="text-white/60">
           © {currentYear} Rede Proteção. Todos os direitos reservados.
         </p>

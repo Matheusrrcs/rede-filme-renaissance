@@ -59,7 +59,7 @@ const Services = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center flex justify-center">
           <Link to="/todos-servicos">
             <Button 
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 flex items-center gap-2"
