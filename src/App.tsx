@@ -11,6 +11,8 @@ import AllServices from "./pages/AllServices";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
+import InstallerPage from "./pages/InstallerPage";
+import BudgetPage from "./pages/BudgetPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/todos-servicos" element={<AllServices />} />
               <Route path="/services/:serviceId" element={<ServiceDetail />} />
+              <Route path="/instalador-autorizado" element={<InstallerPage />} />
+              <Route path="/orcamento-online" element={<BudgetPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

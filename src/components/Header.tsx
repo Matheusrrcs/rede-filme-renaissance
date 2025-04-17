@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,33 +10,43 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { label: 'Início', href: '#home' },
+    { label: 'Início', href: '/' },
     { label: 'Serviços', href: '#services' },
     { label: 'Empresa', href: '#about' },
-    { label: 'Solicitar Orçamento', href: '#quote' },
-    { label: 'Simulação', href: '#simulation' },
+    { label: 'Orçamento Online', href: '/orcamento-online' },
+    { label: 'Instalador Autorizado', href: '/instalador-autorizado' },
     { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank' }
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-2xl font-bold">
+        <Link to="/" className="text-2xl font-bold">
           <span className="text-red-600">REDE</span>
           <span className="text-yellow-500">FILME</span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           {menuItems.map((item) => (
-            <a 
-              key={item.href} 
-              href={item.href} 
-              target={item.target}
-              className="text-gray-800 hover:text-red-600 transition-colors"
-            >
-              {item.label}
-            </a>
+            item.target ? (
+              <a 
+                key={item.href} 
+                href={item.href} 
+                target={item.target}
+                className="text-gray-800 hover:text-red-600 transition-colors"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link 
+                key={item.href} 
+                to={item.href} 
+                className="text-gray-800 hover:text-red-600 transition-colors"
+              >
+                {item.label}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -56,15 +67,26 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
           <nav className="flex flex-col p-4 space-y-2">
             {menuItems.map((item) => (
-              <a 
-                key={item.href} 
-                href={item.href}
-                target={item.target}
-                className="block py-2 text-gray-800 hover:bg-red-50 rounded"
-                onClick={toggleMenu}
-              >
-                {item.label}
-              </a>
+              item.target ? (
+                <a 
+                  key={item.href} 
+                  href={item.href}
+                  target={item.target}
+                  className="block py-2 text-gray-800 hover:bg-red-50 rounded"
+                  onClick={toggleMenu}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  key={item.href} 
+                  to={item.href}
+                  className="block py-2 text-gray-800 hover:bg-red-50 rounded"
+                  onClick={toggleMenu}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>
