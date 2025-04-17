@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText, HardHat, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -10,12 +10,22 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { label: 'Início', href: '/' },
-    { label: 'Serviços', href: '#services' },
-    { label: 'Empresa', href: '#about' },
-    { label: 'Orçamento Online', href: '/orcamento-online' },
-    { label: 'Instalador Autorizado', href: '/instalador-autorizado' },
-    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank' }
+    { label: 'Início', href: '/', icon: <FileText className="h-4 w-4" /> },
+    { label: 'Serviços', href: '#services', icon: <FileText className="h-4 w-4" /> },
+    { label: 'Empresa', href: '#about', icon: <FileText className="h-4 w-4" /> },
+    { 
+      label: 'Orçamento Online', 
+      href: '/orcamento-online', 
+      icon: <Calculator className="h-4 w-4" />,
+      highlight: true 
+    },
+    { 
+      label: 'Instalador Autorizado', 
+      href: '/instalador-autorizado', 
+      icon: <HardHat className="h-4 w-4" />,
+      highlight: true
+    },
+    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <FileText className="h-4 w-4" /> }
   ];
 
   return (
@@ -34,16 +44,18 @@ const Header = () => {
                 key={item.href} 
                 href={item.href} 
                 target={item.target}
-                className="text-gray-800 hover:text-red-600 transition-colors"
+                className={`flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors ${item.highlight ? 'font-semibold text-red-600' : ''}`}
               >
+                {item.icon}
                 {item.label}
               </a>
             ) : (
               <Link 
                 key={item.href} 
                 to={item.href} 
-                className="text-gray-800 hover:text-red-600 transition-colors"
+                className={`flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors ${item.highlight ? 'font-semibold text-red-600' : ''}`}
               >
+                {item.icon}
                 {item.label}
               </Link>
             )
@@ -72,18 +84,20 @@ const Header = () => {
                   key={item.href} 
                   href={item.href}
                   target={item.target}
-                  className="block py-2 text-gray-800 hover:bg-red-50 rounded"
+                  className={`flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded ${item.highlight ? 'font-semibold text-red-600' : ''}`}
                   onClick={toggleMenu}
                 >
+                  {item.icon}
                   {item.label}
                 </a>
               ) : (
                 <Link 
                   key={item.href} 
                   to={item.href}
-                  className="block py-2 text-gray-800 hover:bg-red-50 rounded"
+                  className={`flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded ${item.highlight ? 'font-semibold text-red-600' : ''}`}
                   onClick={toggleMenu}
                 >
+                  {item.icon}
                   {item.label}
                 </Link>
               )
