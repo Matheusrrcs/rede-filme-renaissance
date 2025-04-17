@@ -1,11 +1,11 @@
 
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import CategorySection from "@/components/CategorySection";
-import LatestNews from "@/components/LatestNews";
-import TrendingMovies from "@/components/TrendingMovies";
-import Newsletter from "@/components/Newsletter";
-import Footer from "@/components/Footer";
+import React from 'react';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import Services from '@/components/Services';
+import About from '@/components/About';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -13,10 +13,9 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <CategorySection />
-        <LatestNews />
-        <TrendingMovies />
-        <Newsletter />
+        <Services />
+        <About />
+        <Contact />
       </main>
       <Footer />
     </div>

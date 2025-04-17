@@ -1,49 +1,43 @@
 
-import { Play, Calendar } from 'lucide-react';
+import React from 'react';
+import { ShieldCheck, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-rede-dark">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center" 
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070')",
-          backgroundPosition: "center 25%",
-          filter: "brightness(0.3)"
-        }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-rede-dark/90 to-transparent" />
-      
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="max-w-2xl animate-fade-in">
+    <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
           <div className="flex items-center mb-4 space-x-2">
-            <span className="px-3 py-1 bg-rede-accent text-white text-sm rounded-full font-medium">Em destaque</span>
-            <span className="flex items-center text-white/80 text-sm">
-              <Calendar className="h-4 w-4 mr-1" />
-              {new Date().toLocaleDateString('pt-BR')}
-            </span>
+            <ShieldCheck className="h-8 w-8 text-yellow-400" />
+            <span className="text-lg font-medium">Proteção Profissional</span>
           </div>
-          
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 font-montserrat">
-            Duna: Parte 2 supera expectativas e conquista bilheteria mundial
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Soluções Completas em Redes de Proteção
           </h1>
-          
-          <p className="text-white/80 text-lg mb-6">
-            Épico de ficção científica dirigido por Denis Villeneuve já arrecadou mais de $630 milhões globalmente, tornando-se um dos maiores sucessos de 2024.
+          <p className="text-lg text-white/80 mb-8">
+            Oferecemos serviços especializados em redes de proteção para diversos ambientes. 
+            Segurança, qualidade e tranquilidade para você.
           </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-rede-secondary hover:bg-rede-primary text-white">
-              Leia a matéria
+          <div className="flex space-x-4">
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+              Solicitar Orçamento
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-              <Play className="mr-2 h-5 w-5" /> Assistir trailer
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10 flex items-center"
+            >
+              <Phone className="mr-2" /> Contato
             </Button>
           </div>
+        </div>
+        <div className="hidden md:block">
+          <img 
+            src="https://images.unsplash.com/photo-1558002438-ddc106521f24" 
+            alt="Redes de Proteção" 
+            className="rounded-lg shadow-xl"
+          />
         </div>
       </div>
     </section>
