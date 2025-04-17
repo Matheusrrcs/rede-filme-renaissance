@@ -10,6 +10,7 @@ import ServiceDetail from "./components/ServiceDetail";
 import AllServices from "./pages/AllServices";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingButtons from "./components/FloatingButtons";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <FloatingButtons />
         </div>
       </BrowserRouter>
     </TooltipProvider>
