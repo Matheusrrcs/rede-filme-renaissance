@@ -29,8 +29,8 @@ const formSchema = z.object({
   urgency: z.enum(['baixa', 'media', 'alta']),
   preferredContact: z.enum(['email', 'whatsapp', 'telefone']),
   availableTimes: z.array(z.string()).min(1, { message: 'Selecione pelo menos um período disponível' }),
-  termsAgreed: z.literal(true, {
-    errorMap: () => ({ message: 'Você precisa aceitar os termos' })
+  termsAgreed: z.boolean().refine(val => val === true, {
+    message: 'Você precisa aceitar os termos'
   }),
 });
 
