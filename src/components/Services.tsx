@@ -2,13 +2,13 @@
 import React from 'react';
 import { 
   Fence, Home, Umbrella, Shield, Building, 
-  Cat, Dog, SwimmingPool, Play 
+  Cat, Dog, Waves, Play 
 } from 'lucide-react';
 
 const serviceList = [
   { icon: Home, title: 'Varandas', description: 'Proteção para varandas e espaços residenciais' },
   { icon: Fence, title: 'Quadras', description: 'Redes de proteção para quadras esportivas' },
-  { icon: SwimmingPool, title: 'Piscinas', description: 'Segurança para áreas de piscina' },
+  { icon: Waves, title: 'Piscinas', description: 'Segurança para áreas de piscina' },
   { icon: Play, title: 'Parques', description: 'Proteção para áreas de lazer infantil' },
   { icon: Umbrella, title: 'Obras', description: 'Redes de segurança para construções' },
   { icon: Cat, title: 'Animais', description: 'Proteção para gatos e áreas de pet' },
