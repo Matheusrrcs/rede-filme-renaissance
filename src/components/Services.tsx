@@ -1,33 +1,21 @@
+
 import React from 'react';
 import { 
-  Cat, Home, Waves, Shield, Building, 
-  BookOpen, Bird, Grid, Film, Package,
-  Fence, Lock, Mountain, Baby, MoveDown, 
-  Bath, Construction, Trees, Play
+  Cat, Home, Waves, Baby, 
+  MoveDown, Play
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
-const serviceList = [
+// Lista de serviços principais a serem exibidos na página inicial
+const mainServices = [
   { icon: Cat, title: 'Animais', description: 'Proteção para animais de estimação', link: '/services/animais' },
   { icon: Home, title: 'Varandas', description: 'Proteção para varandas e sacadas', link: '/services/varandas' },
   { icon: Play, title: 'Quadras', description: 'Redes para quadras esportivas', link: '/services/quadras' },
   { icon: Waves, title: 'Piscinas', description: 'Proteção para áreas de piscina', link: '/services/piscinas' },
   { icon: Baby, title: 'Crianças', description: 'Segurança para crianças e bebês', link: '/services/criancas' },
   { icon: MoveDown, title: 'Escadas', description: 'Proteção para escadarias', link: '/services/escadas' },
-  { icon: Bath, title: 'Morcegos', description: 'Prevenção contra morcegos', link: '/services/morcegos' },
-  { icon: Construction, title: 'Obras', description: 'Redes de segurança para construções', link: '/services/obras' },
-  { icon: Trees, title: 'Parques', description: 'Proteção para áreas de lazer', link: '/services/parques' },
-  { icon: Bird, title: 'Pombos', description: 'Prevenção contra pombos', link: '/services/pombos' },
-  { icon: Grid, title: 'Rede', description: 'Redes de proteção diversas', link: '/services/rede' },
-  { icon: Grid, title: 'Tela', description: 'Telas de proteção para diversos fins', link: '/services/tela' },
-  { icon: Film, title: 'Pelicula', description: 'Películas de proteção', link: '/services/pelicula' },
-  { icon: Package, title: 'Kit', description: 'Kits completos de proteção', link: '/services/kit' },
-  { icon: Fence, title: 'Alambrado', description: 'Alambrados de segurança', link: '/services/alambrado' },
-  { icon: Lock, title: 'Securifor', description: 'Sistema Securifor de proteção', link: '/services/securifor' },
-  { icon: Fence, title: 'Nylofor', description: 'Gradil Nylofor para segurança', link: '/services/nylofor' },
-  { icon: Fence, title: 'Concertina', description: 'Concertinas de segurança', link: '/services/concertina' },
-  { icon: Mountain, title: 'Talude', description: 'Proteção para taludes', link: '/services/talude' }
 ];
 
 const Services = () => {
@@ -43,8 +31,8 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {serviceList.map((service, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {mainServices.map((service, index) => (
             <Link 
               to={service.link}
               key={index} 
@@ -69,6 +57,17 @@ const Services = () => {
               </Button>
             </Link>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link to="/todos-servicos">
+            <Button 
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 flex items-center gap-2"
+            >
+              Ver Todos os Serviços
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

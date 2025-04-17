@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./components/ServiceDetail";
+import AllServices from "./pages/AllServices";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -23,6 +24,7 @@ const App = () => (
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/todos-servicos" element={<AllServices />} />
               <Route path="/services/:serviceId" element={<ServiceDetail />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
