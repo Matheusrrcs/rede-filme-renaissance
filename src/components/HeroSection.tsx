@@ -33,11 +33,15 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <img 
-            src="https://images.unsplash.com/photo-1558002438-ddc106521f24" 
-            alt="Redes de Proteção" 
+          <video 
             className="rounded-lg shadow-xl object-cover h-[500px] w-full"
-          />
+            autoPlay
+            muted
+            loop
+          >
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
         </div>
       </div>
     </section>

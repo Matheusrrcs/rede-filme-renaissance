@@ -47,11 +47,15 @@ const About = () => {
           </div>
         </div>
         
-        <div>
+        <div className="flex justify-center">
           <img 
-            src="https://images.unsplash.com/photo-1593786685410-5a74c7c6dd24" 
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf" 
             alt="Equipe de Trabalho" 
-            className="rounded-lg shadow-xl"
+            className="rounded-lg shadow-xl max-h-[500px] object-cover"
+            onError={(e) => {
+              e.currentTarget.src = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf";
+              console.log("Image failed to load, using fallback");
+            }}
           />
         </div>
       </div>

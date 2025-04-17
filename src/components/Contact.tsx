@@ -88,9 +88,8 @@ const Contact = () => {
           />
           <Button 
             type="submit" 
-            variant="rede" 
             size="lg" 
-            className="w-full"
+            className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold"
           >
             Solicitar Orçamento
           </Button>
@@ -101,4 +100,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
