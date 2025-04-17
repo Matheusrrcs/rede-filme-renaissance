@@ -34,7 +34,7 @@ const HeroSection = () => {
             Segurança, qualidade e tranquilidade para você.
           </p>
           <div className="flex space-x-4">
-            <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+            <Button size="lg" className="bg-yellow-500 text-white hover:bg-yellow-400">
               Solicitar Orçamento
             </Button>
             <Button 
