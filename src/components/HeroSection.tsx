@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24">
+    <section className="bg-gradient-to-r from-red-600 to-yellow-500 text-white py-16 md:py-24">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="flex items-center mb-4 space-x-2">
-            <ShieldCheck className="h-8 w-8 text-yellow-400" />
+            <ShieldCheck className="h-8 w-8 text-white" />
             <span className="text-lg font-medium">Proteção Profissional</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -20,7 +20,7 @@ const HeroSection = () => {
             Segurança, qualidade e tranquilidade para você.
           </p>
           <div className="flex space-x-4">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+            <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
               Solicitar Orçamento
             </Button>
             <Button 
@@ -36,7 +36,7 @@ const HeroSection = () => {
           <img 
             src="https://images.unsplash.com/photo-1558002438-ddc106521f24" 
             alt="Redes de Proteção" 
-            className="rounded-lg shadow-xl"
+            className="rounded-lg shadow-xl object-cover h-[500px] w-full"
           />
         </div>
       </div>

@@ -12,14 +12,17 @@ const Header = () => {
     { label: 'Início', href: '#home' },
     { label: 'Serviços', href: '#services' },
     { label: 'Empresa', href: '#about' },
-    { label: 'Contato', href: '#contact' }
+    { label: 'Solicitar Orçamento', href: '#quote' },
+    { label: 'Simulação', href: '#simulation' },
+    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank' }
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-2xl font-bold text-blue-600">
-          Rede Proteção
+        <div className="text-2xl font-bold">
+          <span className="text-red-600">REDE</span>
+          <span className="text-yellow-500">FILME</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -28,7 +31,8 @@ const Header = () => {
             <a 
               key={item.href} 
               href={item.href} 
-              className="text-gray-800 hover:text-blue-600 transition-colors"
+              target={item.target}
+              className="text-gray-800 hover:text-red-600 transition-colors"
             >
               {item.label}
             </a>
@@ -54,8 +58,9 @@ const Header = () => {
             {menuItems.map((item) => (
               <a 
                 key={item.href} 
-                href={item.href} 
-                className="block py-2 text-gray-800 hover:bg-blue-50 rounded"
+                href={item.href}
+                target={item.target}
+                className="block py-2 text-gray-800 hover:bg-red-50 rounded"
                 onClick={toggleMenu}
               >
                 {item.label}
