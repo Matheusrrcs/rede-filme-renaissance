@@ -19,21 +19,21 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-red-600 to-yellow-500 text-white py-16 md:py-24">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <section className="bg-gradient-to-r from-red-600 to-yellow-500 text-white py-12 md:py-24">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="flex items-center mb-4 space-x-2">
             <ShieldCheck className="h-8 w-8 text-white" />
             <span className="text-lg font-medium">Proteção Profissional</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">
             Soluções Completas em Redes de Proteção
           </h1>
           <p className="text-lg text-white/80 mb-8">
             Oferecemos serviços especializados em redes de proteção para diversos ambientes. 
             Segurança, qualidade e tranquilidade para você.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-3">
             <Button size="lg" className="bg-yellow-500 text-white hover:bg-yellow-400">
               Solicitar Orçamento
             </Button>
@@ -46,11 +46,11 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="hidden md:block relative">
+        <div className="mt-8 md:mt-0 relative">
           <div className="relative rounded-lg shadow-xl overflow-hidden">
             <video 
               ref={videoRef}
-              className="object-cover h-[500px] w-full"
+              className="object-cover h-[300px] md:h-[500px] w-full"
               muted
               loop
               poster="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1280&q=80"
@@ -63,11 +63,11 @@ const HeroSection = () => {
               onClick={togglePlayPause}
               className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors group"
             >
-              <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center text-red-600 transition-transform transform group-hover:scale-110">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/80 flex items-center justify-center text-red-600 transition-transform transform group-hover:scale-110">
                 {isPlaying ? (
-                  <Pause className="h-8 w-8" />
+                  <Pause className="h-6 w-6 md:h-8 md:w-8" />
                 ) : (
-                  <Play className="h-8 w-8 ml-1" />
+                  <Play className="h-6 w-6 md:h-8 md:w-8 ml-1" />
                 )}
               </div>
             </button>
