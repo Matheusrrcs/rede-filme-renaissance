@@ -31,14 +31,14 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 flex flex-col gap-3 md:gap-4 z-50">
       {isVisible && (
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="rounded-full w-14 h-14 bg-rede-primary hover:bg-rede-secondary shadow-lg transition-all duration-300 animate-fade-in group"
+          className="rounded-full w-12 h-12 md:w-14 md:h-14 bg-rede-primary hover:bg-rede-secondary shadow-lg transition-all duration-300 animate-fade-in group"
         >
-          <ChevronUp className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
+          <ChevronUp className="h-6 w-6 md:h-8 md:w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
       )}
       
@@ -50,9 +50,9 @@ const FloatingButtons = () => {
       >
         <Button
           size="icon"
-          className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 group"
+          className="rounded-full w-14 h-14 md:w-16 md:h-16 bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 group"
         >
-          <MessageCircle className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
+          <MessageCircle className="h-6 w-6 md:h-8 md:w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
       </a>
     </div>

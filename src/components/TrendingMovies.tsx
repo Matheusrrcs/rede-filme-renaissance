@@ -82,10 +82,10 @@ const TrendingMovies = () => {
   const visibleMovies = trendingMovies.slice(currentIndex, currentIndex + moviesPerPage);
   
   return (
-    <section className="py-16 bg-rede-dark">
+    <section className="py-12 md:py-16 bg-rede-dark">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="section-title text-white">Em Alta nos Cinemas</h2>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 md:mb-10">
+          <h2 className="section-title text-white text-center md:text-left">Em Alta nos Cinemas</h2>
           
           <div className="flex items-center space-x-3">
             <button 
@@ -103,10 +103,10 @@ const TrendingMovies = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {visibleMovies.map((movie) => (
             <div key={movie.id} className="relative overflow-hidden rounded-lg group">
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-64 md:h-80 overflow-hidden">
                 <img 
                   src={movie.image} 
                   alt={movie.title} 
@@ -115,7 +115,7 @@ const TrendingMovies = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80" />
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-4">
+              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
                 <div className="flex items-center space-x-2 mb-2">
                   <span className="px-2 py-1 bg-rede-accent/80 text-white text-xs rounded-md font-medium">
                     {movie.genres[0]}
@@ -125,13 +125,13 @@ const TrendingMovies = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-white text-lg font-semibold mb-1">{movie.title}</h3>
+                <h3 className="text-white text-base md:text-lg font-semibold mb-1 line-clamp-2">{movie.title}</h3>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-white/80 text-sm">{movie.releaseDate}</span>
+                  <span className="text-white/80 text-xs md:text-sm">{movie.releaseDate}</span>
                   <div className="flex items-center text-white">
                     <Star className="h-4 w-4 text-yellow-400 fill-yellow-400 mr-1" />
-                    <span className="text-sm">{movie.rating}</span>
+                    <span className="text-xs md:text-sm">{movie.rating}</span>
                   </div>
                 </div>
               </div>

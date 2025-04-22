@@ -29,20 +29,20 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
+        <Link to="/" className="text-xl md:text-2xl font-bold">
           <span className="text-red-600">REDE</span>
           <span className="text-yellow-500">FILME</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-4 lg:space-x-6">
           {menuItems.map((item) => (
             item.target ? (
               <a 
                 key={item.href} 
                 href={item.href} 
                 target={item.target}
-                className="flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors"
+                className="flex items-center gap-2 text-sm lg:text-base text-gray-800 hover:text-red-600 transition-colors"
               >
                 {item.icon}
                 {item.label}
@@ -51,7 +51,7 @@ const Header = () => {
               <Link 
                 key={item.href} 
                 to={item.href} 
-                className="flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors"
+                className="flex items-center gap-2 text-sm lg:text-base text-gray-800 hover:text-red-600 transition-colors"
               >
                 {item.icon}
                 {item.label}
@@ -64,25 +64,26 @@ const Header = () => {
         <div className="md:hidden">
           <Button 
             variant="ghost" 
-            size="icon" 
+            size="icon"
+            className="relative z-50"
             onClick={toggleMenu}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-          <nav className="flex flex-col p-4 space-y-2">
+        <div className="md:hidden fixed inset-0 top-[57px] bg-white z-40">
+          <nav className="flex flex-col p-4 space-y-3">
             {menuItems.map((item) => (
               item.target ? (
                 <a 
                   key={item.href} 
                   href={item.href}
                   target={item.target}
-                  className="flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded"
+                  className="flex items-center gap-3 py-3 text-lg text-gray-800 hover:bg-red-50 rounded-lg px-4"
                   onClick={toggleMenu}
                 >
                   {item.icon}
@@ -92,7 +93,7 @@ const Header = () => {
                 <Link 
                   key={item.href} 
                   to={item.href}
-                  className="flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded"
+                  className="flex items-center gap-3 py-3 text-lg text-gray-800 hover:bg-red-50 rounded-lg px-4"
                   onClick={toggleMenu}
                 >
                   {item.icon}
