@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FloatingButtons = () => {
@@ -36,9 +36,9 @@ const FloatingButtons = () => {
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="rounded-full bg-yellow-500 hover:bg-yellow-600 shadow-lg transition-all duration-300 animate-fade-in"
+          className="rounded-full w-14 h-14 bg-rede-primary hover:bg-rede-secondary shadow-lg transition-all duration-300 animate-fade-in group"
         >
-          <ChevronUp className="h-5 w-5" />
+          <ChevronUp className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
       )}
       
@@ -50,12 +50,9 @@ const FloatingButtons = () => {
       >
         <Button
           size="icon"
-          className="rounded-full w-14 h-14 bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300"
+          className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 group"
         >
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
-            <path d="M9 10a0.5 .5 0 0 0 1 0V9a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1"></path>
-          </svg>
+          <MessageSquare className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
       </a>
     </div>
