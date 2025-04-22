@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ChevronUp, Instagram, WhatsApp } from 'lucide-react';
+import { ChevronUp, whatsapp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FloatingButtons = () => {
@@ -52,7 +52,7 @@ const FloatingButtons = () => {
           size="icon"
           className="rounded-full w-16 h-16 bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 group"
         >
-          <WhatsApp className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
+          <whatsapp className="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
       </a>
     </div>
