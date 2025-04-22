@@ -40,7 +40,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white/10 flex items-center"
+              className="border-white text-white hover:bg-white/20 hover:text-red-600 flex items-center"
             >
               <Phone className="mr-2" /> Contato
             </Button>
@@ -53,7 +53,7 @@ const HeroSection = () => {
               className="object-cover h-[500px] w-full"
               muted
               loop
-              poster="https://images.unsplash.com/photo-1558002438-ddc106521f24"
+              poster="https://images.unsplash.com/photo-1619410283995-831a7c12c94c"
             >
               <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos HTML5.
@@ -79,3 +79,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
