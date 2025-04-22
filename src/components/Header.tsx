@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Shield, HardHat, Calculator, Home, Phone, Map } from 'lucide-react';
+import { Menu, X, Shield, HardHat, Calculator, Home, Phone, Map, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ const Header = () => {
       href: '/instalador-autorizado', 
       icon: <HardHat className="h-4 w-4" />
     },
-    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <Phone className="h-4 w-4" /> }
+    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <Instagram className="h-4 w-4" /> }
   ];
 
   return (
