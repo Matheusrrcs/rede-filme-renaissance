@@ -53,7 +53,7 @@ const HeroSection = () => {
               className="object-cover h-[500px] w-full"
               muted
               loop
-              poster="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1280&q=80"
+              poster="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1280&q=80"
             >
               <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos HTML5.

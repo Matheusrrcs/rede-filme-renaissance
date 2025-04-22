@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, FileText, HardHat, Calculator } from 'lucide-react';
+import { Menu, X, Shield, HardHat, Calculator, Home, Phone, Map } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -10,9 +10,9 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { label: 'Início', href: '/', icon: <FileText className="h-4 w-4" /> },
-    { label: 'Serviços', href: '#services', icon: <FileText className="h-4 w-4" /> },
-    { label: 'Empresa', href: '#about', icon: <FileText className="h-4 w-4" /> },
+    { label: 'Início', href: '/', icon: <Home className="h-4 w-4" /> },
+    { label: 'Serviços', href: '#services', icon: <Shield className="h-4 w-4" /> },
+    { label: 'Empresa', href: '#about', icon: <Map className="h-4 w-4" /> },
     { 
       label: 'Orçamento Online', 
       href: '/orcamento-online', 
@@ -23,7 +23,7 @@ const Header = () => {
       href: '/instalador-autorizado', 
       icon: <HardHat className="h-4 w-4" />
     },
-    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <FileText className="h-4 w-4" /> }
+    { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <Phone className="h-4 w-4" /> }
   ];
 
   return (
