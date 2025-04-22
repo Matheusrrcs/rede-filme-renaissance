@@ -16,14 +16,12 @@ const Header = () => {
     { 
       label: 'Orçamento Online', 
       href: '/orcamento-online', 
-      icon: <Calculator className="h-4 w-4" />,
-      highlight: true 
+      icon: <Calculator className="h-4 w-4" />
     },
     { 
       label: 'Instalador Autorizado', 
       href: '/instalador-autorizado', 
-      icon: <HardHat className="h-4 w-4" />,
-      highlight: true
+      icon: <HardHat className="h-4 w-4" />
     },
     { label: 'Instagram', href: 'https://www.instagram.com/redefilme', target: '_blank', icon: <FileText className="h-4 w-4" /> }
   ];
@@ -44,7 +42,7 @@ const Header = () => {
                 key={item.href} 
                 href={item.href} 
                 target={item.target}
-                className={`flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors ${item.highlight ? 'font-semibold text-red-600' : ''}`}
+                className="flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors"
               >
                 {item.icon}
                 {item.label}
@@ -53,7 +51,7 @@ const Header = () => {
               <Link 
                 key={item.href} 
                 to={item.href} 
-                className={`flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors ${item.highlight ? 'font-semibold text-red-600' : ''}`}
+                className="flex items-center gap-2 text-gray-800 hover:text-red-600 transition-colors"
               >
                 {item.icon}
                 {item.label}
@@ -84,7 +82,7 @@ const Header = () => {
                   key={item.href} 
                   href={item.href}
                   target={item.target}
-                  className={`flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded ${item.highlight ? 'font-semibold text-red-600' : ''}`}
+                  className="flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded"
                   onClick={toggleMenu}
                 >
                   {item.icon}
@@ -94,7 +92,7 @@ const Header = () => {
                 <Link 
                   key={item.href} 
                   to={item.href}
-                  className={`flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded ${item.highlight ? 'font-semibold text-red-600' : ''}`}
+                  className="flex items-center gap-2 py-2 text-gray-800 hover:bg-red-50 rounded"
                   onClick={toggleMenu}
                 >
                   {item.icon}
