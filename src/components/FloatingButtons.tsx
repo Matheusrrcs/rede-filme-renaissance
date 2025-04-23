@@ -36,7 +36,7 @@ const FloatingButtons = () => {
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="rounded-full w-12 h-12 md:w-14 md:h-14 bg-rede-primary hover:bg-rede-secondary shadow-lg transition-all duration-300 animate-fade-in group"
+          className="rounded-full w-12 h-12 md:w-14 md:h-14 bg-yellow-500 hover:bg-rede-secondary shadow-lg transition-all duration-300 animate-fade-in group"
         >
           <ChevronUp className="h-6 w-6 md:h-8 md:w-8 text-white group-hover:scale-110 transition-transform" />
         </Button>
