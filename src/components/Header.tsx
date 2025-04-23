@@ -10,7 +10,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems = [
-    { label: 'Início', href: '/', icon: <Home className="h-4 w-4" /> },
+    { label: 'Início', href: '/rede-filme-renaissance', icon: <Home className="h-4 w-4" /> },
     { label: 'Serviços', href: '#services', icon: <Shield className="h-4 w-4" /> },
     { label: 'Empresa', href: '#about', icon: <Map className="h-4 w-4" /> },
     { 
@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="text-xl md:text-2xl font-bold">
+        <Link to="/rede-filme-renaissance" className="text-xl md:text-2xl font-bold">
           <span className="text-red-600">REDE</span>
           <span className="text-yellow-500">FILME</span>
         </Link>

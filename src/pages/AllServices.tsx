@@ -36,7 +36,7 @@ const AllServices = () => {
   return (
     <div className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <Link to="/#services" className="inline-flex items-center text-red-600 hover:text-red-800 mb-8">
+        <Link to="/rede-filme-renaissance" className="inline-flex items-center text-red-600 hover:text-red-800 mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar para página inicial
         </Link>

@@ -16,7 +16,7 @@ const ThankYouPage = () => {
           e entraremos em contato com você em breve.
         </p>
         <Button 
-          onClick={() => window.location.href = '/'} 
+          onClick={() => window.location.href = '/rede-filme-renaissance'} 
           className="bg-red-600 hover:bg-red-700"
         >
           Voltar para a Página Inicial

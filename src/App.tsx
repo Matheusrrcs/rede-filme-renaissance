@@ -28,7 +28,7 @@ const App = () => (
             <Header />
             <main className="flex-grow">
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/rede-filme-renaissance" element={<Index />} />
                 <Route path="/todos-servicos" element={<AllServices />} />
                 <Route path="/services/:serviceId" element={<ServiceDetail />} />
                 <Route path="/instalador-autorizado" element={<InstallerPage />} />
